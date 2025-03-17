@@ -3,8 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>index</title>
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    <script type="text/javascript" src="/js/index.js"></script>
 </head>
 <body>
-<h1>Hello World!</h1>
+    <div class="container-body">
+        <div id="container" class="container">
+            <div id="logo_wrap" class="logo_wrap">
+                <div id="logo" class="logo">
+                    <img src="/images/logo.png" alt="logo">
+                </div>
+            </div>
+            <div id="login_wrap" class="login_wrap">
+                <form action="user/login" method="POST">
+                    <div class="id_wrap">
+                        <label for="userId">아이디</label>
+                        <input type="text" id="userId" name="userId">
+                    </div>
+                    <div class="pw_wrap">
+                        <label for="userPassword">비밀번호</label>
+                        <input type="password" id="userPassword" name="userPassword">
+                    </div>
+                    <div class="login_info">
+                        <p>아이디와 비밀번호를 확인해주세요.</p>
+                    </div>
+                    <div class="btn_wrap">
+                        <input type="submit" class="login_btn" value="로그인">
+                        <div class="join_wrap">
+                            <input type="button" class="join_btn" value="회원가입" onclick="goJoin()">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
