@@ -1,0 +1,27 @@
+.header_text p {
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.input_label {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+.input_input {
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    padding-left: 15px;
+    border: 1px solid #dadada;
+    border-radius: 7px;
+    box-shadow: 0 0 5px #f4f4f4;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.check_text {
+    color: #f00;
+    font-size: 13px;
+}

@@ -3,8 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <title>join</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/join.css">
+    <script type="text/javascript" src="/js/join.js"></script>
 </head>
 <body>
+    <div class="container-body">
+        <div class="container">
+            <div class="header_text">
+                <p>회원가입</p>
+            </div>
+            <div class="join_wrap">
+                <form action="user/join" method="POST">
+                    <div class="id_wrap">
+                        <label for="userId" class="input_label">
+                            아이디<span class="check_text">사용할 수 없는 아이디입니다.</span>
+                        </label>
+                        <input type="text" id="userId" name="userId" class="input_input">
+                        <button>중복 확인</button>
+                    </div>
+                    <div class="pw_wrap">
+                        <label for="userPassword">
+                            비밀번호<span class="check_text">8글자 이상, 영문, 숫자, 특수문자를 모두 사용하세요.</span>
+                        </label>
+                        <input type="password" id="userPassword" name="userPassword">
+                    </div>
+                    <div class="pw_wrap">
+                        <label for="userPassword_ch">
+                            비밀번호 확인<span class="check_text">비밀번호가 일치하지 않습니다.</span>
+                        </label>
+                        <input type="password" id="userPassword_ch" name="userPassword">
+                    </div>
+                    <div class="name_wrap">
+                        <label for="userName">이름</label>
+                        <input type="text" id="userName" name="userName">
+                    </div>
+                    <div class="email">
+                        <label for="userEmail">이메일</label>
+                        <input type="text" id="userEmail" name="userEmail">
+                        <!--<input type="text" id="selectDomain" disabled>-->
+                        <select class="domain_list" id="domain_list">
+                            <option value="naver.com" selected>naver.com</option>
+                            <option value="gmail.com">gmail.com</option>
+                            <option value="nate.com">nate.com</option>
+                            <option value="kakao.com">kakao.com</option>
+                            <option value="hanmail.com">hanmail.com</option>
+                            <option value="type">직접 입력</option>
+                        </select>
+                    </div>
+                    <div class="btn_wrap">
+                        <input type="submit" class="join_btn" value="가입하기">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--
 <h1>Hello World!67b7ff</h1>
 <a href="/user/login">로그인</a>
 <a href="/user/join">회원가입</a>
@@ -15,6 +69,6 @@
         전화번호: <input  type="text" name="userPhone">
         <input type="submit" value="회원가입">
 
-    </form>
+    </form>-->
 </body>
 </html>

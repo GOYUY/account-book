@@ -24,7 +24,7 @@
 .login_wrap .id_wrap input:focus,
 .login_wrap .pw_wrap input:focus {
     border-color: #9acfff;
-    box-shadow: 0px 0px 5px #a6d5ff;
+    box-shadow: 0 0 5px #a6d5ff;
 }
 .login_wrap .id_wrap input,
 .login_wrap .pw_wrap input {
@@ -34,7 +34,7 @@
     padding-left: 15px;
     border: 1px solid #dadada;
     border-radius: 7px;
-    box-shadow: 0px 0px 5px #f4f4f4;
+    box-shadow: 0 0 5px #f4f4f4;
     outline: none;
     box-sizing: border-box;
 }
