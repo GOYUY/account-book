@@ -1,8 +1,9 @@
-/*
 $(function() {
+    $('#selectDomain').val($("#domain_list option:selected").val());
+
     $("#domain_list").change(function () {
-        var slected = $("#domain_list option:selected").val();
-        var selectedDomain = $('#selectDomain');
+        let slected = $("#domain_list option:selected").val();
+        let selectedDomain = $('#selectDomain');
         if(slected !== "type") {
             selectedDomain.val(slected);
             selectedDomain.attr("disabled","true")
@@ -12,5 +13,9 @@ $(function() {
         }
     })
 });
-*/
+
+function checkId() {
+
+}
+
 

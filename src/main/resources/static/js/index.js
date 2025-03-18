@@ -1,3 +1,3 @@
 function goJoin() {
-    location.href="/user/join";
+    location.href="/join";
 }
