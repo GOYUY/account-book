@@ -1,0 +1,291 @@
+
+.nav {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+    width: 300px;
+    /*transition:
+            background-color var(--trans-dur),
+            width var(--trans-dur) ease-in-out;*/
+}
+.nav_logo {
+    text-align: center;
+    margin-bottom: 45px;
+}
+.nav_logo img {
+    width: 235px;
+}
+body {
+    background-color: #e2e3e8;
+    color: #17181c;
+    height: 100vh;
+    border: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.nav_main {
+    padding: 50px 20px;
+    overflow-x: hidden;
+    scrollbar-color: transparent transparent;
+}
+.nav_items {
+    padding: 0 0 20px 0;
+    list-style: none;
+    margin: 0 0 30px 0;
+    border-bottom: 1px solid #e2e2e2;
+}
+.nav_item {
+    display: flex;
+}
+.nav_heading {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: #888888;
+    display: block;
+    font-size: 15px;
+    line-height: 1;
+    text-transform: uppercase;
+    padding-left: 18px;
+    letter-spacing: 1px;
+}
+.nav_item-text {
+    margin-left: 15px;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    font-size: 18px;
+    color: #6b6b6b;
+}
+.nav_icon {
+    font-size: 27px !important;
+    color: #434448;
+}
+.nav_item-box {
+    background-color: rgb(255 255 255 / 0%);
+    border-radius: 11px;
+    color: #7582a3;
+    display: flex;
+    align-items: center;
+    padding: 13px 18px;
+    text-align: left;
+    text-decoration: none;
+    transition:
+            background-color 0.3s ease-in-out,
+            color 0.3s,
+            width 0.3s ease-in-out;
+    width: 100%;
+    /*min-width: 3em;*/
+}
+.nav_item-box:focus,
+.nav_item-box:hover {
+    /*background-color: #ebf0fe;*/
+    background-color: #ddefff;
+}
+.nav_item-box:focus .nav_item-text,
+.nav_item-box:focus .nav_icon,
+.nav_item-box:hover .nav_item-text,
+.nav_item-box:hover .nav_icon {
+    /*color: #255ff4;*/
+    color: #2598ff;
+}
+
+.nav_item-box:focus {
+    outline: transparent;
+}
+.logout_btn_wrap {
+    border: 1px solid #dbdbdb;
+    border-radius: 10px;
+    box-shadow: 1px 1px 4px #ddd;
+}
+.logout_btn {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    text-align: left;
+    text-decoration: none;
+}
+.logout_btn_wrap:hover {
+    box-shadow: unset;
+    transition: .2s ease;
+}
+.nav_icon_logout {
+    background-color: #ddefff;
+    color: #47a6fc;
+    border-radius: 50px;
+    padding: 5px;
+    margin-right: 2px;
+    font-size: 25px !important;
+}
+/*
+:root {
+    --hue: 223;
+    --hue2: 13;
+    --bg: hsl(var(--hue),10%,90%);
+    --fg: hsl(var(--hue),10%,10%);
+    --primary: hsl(var(--hue),90%,55%);
+    --red: hsl(var(--hue2),90%,55%);
+    --trans-dur: 0.3s;
+    font-size: calc(16px + (20 - 16) * (100vw - 320px) / (1280 - 320));
+}
+
+.nav_main::-webkit-scrollbar {
+    width: 8px;
+}
+.nav_main::-webkit-scrollbar-track {
+    background: transparent;
+}
+.nav_main::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-radius: 4px;
+}
+
+
+.nav_main:hover {
+    scrollbar-color: hsla(0,0%,0%,0.2) transparent;
+}
+.nav_main:hover::-webkit-scrollbar-thumb {
+    background-color: hsla(0,0%,0%,0.2);
+}
+.nav_bottom {
+    background-color: inherit;
+    box-shadow: 0 1px 0 hsl(var(--hue),10%,80%) inset;
+    padding: 1em 1.75em;
+    transition: box-shadow var(--trans-dur);
+}
+
+.nav_heading-text {
+    display: inline-block;
+    transform: translateX(1em);
+    transition: transform var(--trans-dur) ease-in-out;
+}
+
+.nav_items:last-child {
+    margin-bottom: 0;
+}
+
+
+
+.nav_item-icon,
+.nav_item-icon svg {
+    display: block;
+    width: 1.5em;
+    height: 1.5em;
+}
+.nav_item-icon {
+    flex-shrink: 0;
+    position: relative;
+    text-align: center;
+    transition: transform var(--trans-dur) ease-in-out;
+}*/
+/*
+.nav_item-icon--badge:before {
+    background-color: var(--primary);
+    border-radius: 50%;
+    box-shadow: 0 0 0 0.1em hsl(0,0%,100%);
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0.5em;
+    height: 0.5em;
+    transform: scale(0);
+    transition:
+            box-shadow var(--trans-dur),
+            transform var(--trans-dur) ease-in-out;
+}
+
+.nav_item-badge {
+    background-color: hsla(var(--hue),90%,55%,0.1);
+    border-radius: 0.75rem;
+    color: var(--primary);
+    font-size: 0.75em;
+    line-height: 1;
+    margin-left: 0.75rem;
+    padding: 0.125rem 0.5rem;
+    transition:
+            background-color var(--trans-dur),
+            color var(--trans-dur);
+}
+.nav_item-box--red .nav_item-badge {
+    background-color: hsla(var(--hue2),90%,55%,0.1);
+    color: var(--red);
+}
+.nav_item-box--red .nav_item-icon--badge:before {
+    background-color: var(--red);
+}
+*/
+
+/*
+.nav[data-expanded="false"] {
+    width: 6.5em;
+}
+.nav[data-expanded="false"] .nav_heading-text {
+    transform: translateX(calc(2em - 50%));
+}
+.nav[data-expanded="false"] .nav_item-box {
+    width: 3em;
+}
+.nav[data-expanded="false"] .nav_item-icon--badge:before {
+    transform: scale(1);
+}
+.nav[data-expanded="false"] .nav__item-text {
+    opacity: 0;
+    width: 0;
+}
+.nav[data-expanded="false"] .nav__logo {
+    transform: translateX(0);
+}
+.nav[data-expanded="false"] [data-expand] .nav__item-icon {
+    transform: rotate(180deg);
+}
+*/
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: hsl(var(--hue),10%,20%);
+        --fg: hsl(var(--hue),10%,90%);
+    }
+    .nav {
+        background-color: hsl(var(--hue),10%,10%);
+    }
+    .nav__main:hover {
+        scrollbar-color: hsla(0,0%,100%,0.2) transparent;
+    }
+    .nav__main:hover::-webkit-scrollbar-thumb {
+        background-color: hsla(0,0%,100%,0.2);
+    }
+    .nav__bottom {
+        box-shadow: 0 1px 0 hsl(var(--hue),10%,30%) inset;
+    }
+    .nav__heading {
+        color: hsl(var(--hue),10%,65%);
+    }
+    .nav__item-box {
+        background-color: hsla(0,0%,100%,0);
+        color: hsl(var(--hue),20%,75%);
+    }
+    .nav__item-box:focus,
+    .nav__item-box:hover {
+        background-color: hsla(0,0%,100%,0.1);
+        color: hsl(0,0%,100%);
+    }
+    .nav__item-icon--badge:before {
+        box-shadow: 0 0 0 0.1em hsl(var(--hue),10%,10%);
+    }
+    .nav__item-badge {
+        background-color: hsl(var(--hue),90%,55%);
+        color: hsl(0,0%,100%);
+    }
+    .nav__item-box--red .nav__item-badge {
+        background-color: hsl(var(--hue2),90%,55%);
+        color: hsl(0,0%,100%);
+    }
+    .nav__logo {
+        background-color: hsl(0,0%,100%);
+        color: var(--primary);
+    }
+}

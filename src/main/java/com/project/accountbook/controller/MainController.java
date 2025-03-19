@@ -20,4 +20,9 @@ public class MainController {
         return "join";
     }
 
+    @GetMapping("/main")
+    public String main() {
+        return "main";
+    }
+
 }
