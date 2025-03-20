@@ -3,92 +3,86 @@
 <head>
   <meta charset="UTF-8">
   <title>main</title>
+  <link rel="shortcut icon" href="#">
   <link rel="stylesheet" type="text/css" href="/css/main.css">
+  <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@3.2.0/dist/fullcalendar.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.14/index.global.min.js"></script>
   <script type="text/javascript" src="/js/main.js"></script>
 </head>
 <body>
+<div style="position: fixed">
+  <nav class="nav">
+    <div class="nav_main">
+      <div class="nav_logo">
+        <img src="/images/logo.png" alt="logo">
+      </div>
+      <span class="nav_heading">main menu</span>
+      <ul class="nav_items">
+        <li class="nav_item">
+          <a class="nav_item-box" href="#" title="Dashboard">
+            <span class="material-symbols-outlined nav_icon">grid_view</span>
+            <span class="nav_item-text">대시 보드</span>
+          </a>
+        </li>
+        <li class="nav_item">
+          <a class="nav_item-box" href="#" title="Transactions">
+            <span class="material-symbols-outlined nav_icon">currency_exchange</span>
+            <span class="nav_item-text">거래 내역</span>
+          </a>
+        </li>
+        <li class="nav_item">
+          <a class="nav_item-box" href="#" title="Reports">
+            <span class="material-symbols-outlined nav_icon">analytics</span>
+            <span class="nav_item-text">통계</span>
+          </a>
+        </li>
+      </ul>
+      <span class="nav_heading">Settings</span>
+      <ul class="nav_items">
+        <li class="nav_item">
+          <a class="nav_item-box" href="#" title="Categories">
+            <span class="material-symbols-outlined nav_icon">category</span>
+            <span class="nav_item-text">카테고리 설정</span>
+          </a>
+        </li>
+        <li class="nav_item">
+          <a class="nav_item-box" href="#" title="Budgets">
+            <span class="material-symbols-outlined nav_icon">payments</span>
+            <span class="nav_item-text">예산설정</span>
+          </a>
+        </li>
+        <li class="nav_item">
+          <a class="nav_item-box" href="#" title="Recurring">
+            <span class="material-symbols-outlined nav_icon">credit_card</span>
+            <span class="nav_item-text">정기 지출 관리</span>
+          </a>
+        </li>
+      </ul>
+      <span class="nav_heading">My pages</span>
+      <ul class="nav_items">
+        <li class="nav_item">
+          <a class="nav_item-box nav__item-box--red" href="#" title="Profile">
+            <span class="material-symbols-outlined nav_icon">account_circle</span>
+            <span class="nav_item-text">프로필 정보 수정</span>
+          </a>
+        </li>
+      </ul>
+      <div class="logout_btn_wrap">
+        <a class="logout_btn" href="#" title="Logout">
+          <span class="material-symbols-outlined nav_icon_logout">logout</span>
+          <span class="nav_item-text">로그아웃</span>
+        </a>
+      </div>
 
-<nav class="nav">
-  <div class="nav_main">
-    <div class="nav_logo">
-      <img src="/images/logo.png" alt="logo">
     </div>
-    <span class="nav_heading">main menu</span>
-    <ul class="nav_items">
-      <li class="nav_item">
-        <a class="nav_item-box" href="#" title="Dashboard">
-          <span class="material-symbols-outlined nav_icon">grid_view</span>
-          <span class="nav_item-text">대시 보드</span>
-        </a>
-      </li>
-      <li class="nav_item">
-        <a class="nav_item-box" href="#" title="Transactions">
-          <span class="material-symbols-outlined nav_icon">currency_exchange</span>
-          <span class="nav_item-text">거래 내역</span>
-        </a>
-      </li>
-      <li class="nav_item">
-        <a class="nav_item-box" href="#" title="Reports">
-          <span class="material-symbols-outlined nav_icon">analytics</span>
-          <span class="nav_item-text">통계</span>
-        </a>
-      </li>
-    </ul>
-    <span class="nav_heading">Settings</span>
-    <ul class="nav_items">
-      <li class="nav_item">
-        <a class="nav_item-box" href="#" title="Categories">
-          <span class="material-symbols-outlined nav_icon">category</span>
-          <span class="nav_item-text">카테고리 설정</span>
-        </a>
-      </li>
-      <li class="nav_item">
-        <a class="nav_item-box" href="#" title="Budgets">
-          <span class="material-symbols-outlined nav_icon">payments</span>
-          <span class="nav_item-text">예산설정</span>
-        </a>
-      </li>
-      <li class="nav_item">
-        <a class="nav_item-box" href="#" title="Recurring">
-          <span class="material-symbols-outlined nav_icon">credit_card</span>
-          <span class="nav_item-text">정기 지출 관리</span>
-        </a>
-      </li>
-    </ul>
-    <span class="nav_heading">My pages</span>
-    <ul class="nav_items">
-      <li class="nav_item">
-        <a class="nav_item-box nav__item-box--red" href="#" title="Profile">
-          <span class="material-symbols-outlined nav_icon">account_circle</span>
-          <span class="nav_item-text">프로필 정보 수정</span>
-        </a>
-      </li>
-    </ul>
-    <div class="logout_btn_wrap">
-      <a class="logout_btn" href="#" title="Logout">
-        <span class="material-symbols-outlined nav_icon_logout">logout</span>
-        <span class="nav_item-text">로그아웃</span>
-      </a>
-    </div>
+  </nav>
+</div>
 
-  </div>
-  <!--
-  <div class="nav__bottom">
-    <ul class="nav__items">
-      <li class="nav__item">
-        <button class="nav__item-box" type="button" aria-expanded="true" data-expand>
-          <span class="nav__item-icon material-symbols-outlined nav_icon">keyboard_double_arrow_left</span>
-          <span class="nav__item-icon">
-						<svg width="24px" height="24px" aria-hidden="true">
-							<use xlink:href="#arrow" />
-						</svg>
-					</span>
-          <span class="nav__item-text" data-expand-label>Collapse</span>
-        </button>
-      </li>
-    </ul>
-  </div>-->
-</nav>
+<div style="margin-left: 300px;">
+  <div id="calendar"></div>
+</div>
+
 </body>
 </html>
