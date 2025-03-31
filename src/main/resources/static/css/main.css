@@ -1,10 +1,10 @@
-
+/*좌측 네비바 메뉴*/
 .nav {
     background-color: #fff;
     display: flex;
     flex-direction: column;
     position: relative;
-    height: 100%;
+    height: 100vh;
     width: 300px;
     /*transition:
             background-color var(--trans-dur),
@@ -18,7 +18,8 @@
     width: 235px;
 }
 body {
-    background-color: #e2e3e8;
+    /*background-color: #e2e3e8;*/
+    background-color: #eff7ff;
     color: #17181c;
     height: 100vh;
     border: 0;
@@ -119,4 +120,102 @@ body {
     padding: 5px;
     margin-right: 2px;
     font-size: 25px !important;
+}
+/*우측 캘린더*/
+.calendar-div {
+    margin-left: 300px;
+    padding-top: 40px;
+}
+.currentMonth {
+    font-size: 31px;
+    font-weight: bold;
+}
+
+.calendar-container {
+    /*width: 400px;
+    margin: 50px auto;*/
+    margin: 0px 40px;
+    background: #fff;
+    padding: 40px 80px;
+    border-radius: 30px;
+    /*box-shadow: 1px 4px 17px #b6b6b6;*/
+    box-shadow: 1px 3px 14px #c9c9c9;
+    text-align: center;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*margin-bottom: 10px;*/
+}
+
+.calendar-header button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.calendar {
+    /*border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;*/
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    font-weight: bold;
+    margin-bottom: 5px;
+
+    background: #f9f9f9;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 6px 0;
+}
+
+.calendar-body {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+}
+
+.lastDay, .nextDay {
+    color: #bfbfbf;
+}
+
+.day {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    min-height: 80px;
+    text-align: left;
+    position: relative;
+}
+
+.today {
+    background-color: #fff9e4;
+}
+
+.sunday {
+    color: #ff3333;
+}
+
+.transaction {
+    font-size: 16px;
+    padding: 2px;
+    border-radius: 5px;
+    margin-top: 3px;
+}
+.day:has(.transaction) {
+    display: flex;
+    flex-direction: column;
+}
+.expense {
+    color: #ff5959;
+    order: 1;
+}
+.income {
+    color: #4aaa77;
+    order: 0;
 }
